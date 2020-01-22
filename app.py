@@ -1,5 +1,5 @@
 import os
-from flask import Flask
+from flask import Flask, render_template
 from datetime import datetime
 app = Flask(__name__)
 
@@ -24,12 +24,7 @@ def page2():
     """ 
 @app.route('/sida3')
 def page3():
-    return """
-    <h1>Síða 3</h1>
-    <p><a href="/" title="Forsíða">Forsíða </a> | <a href="/sida2" title="Síða 2">Síða 2 </a></p>
-    <p>More cats.</p>
-    <img src="http://loremflickr.com/600/400" />
-    """ 
+    return render_template('sida3.html')
 
 if __name__ == '__main__':
     #app.run()
