@@ -5,8 +5,8 @@ import os
 import urllib.request
 app = Flask(__name__)
 
-with urllib.request.urlopen("https://apis.is/currency/") as url
-    data = json.loads(url.read().decode())
+#with urllib.request.urlopen("https://apis.is/currency/") as url
+#    data = json.loads(url.read().decode())
 
 @app.route('/')
 def homepage():
@@ -15,7 +15,7 @@ def homepage():
     return """
     <h1>Hello heroku</h1>
     <p>It is currently {time}.</p>
-    <p><a href="/sida2" title="Síða 2">Síða 2 </a> | <a href="/sida3" title="Síða 3">Síða 3 </a></p>
+    <p><a                                                                                                                                                                                                                                                                                                                                                                                     href="/sida2" title="Síða 2">Síða 2 </a> | <a href="/sida3" title="Síða 3">Síða 3 </a></p>
     <img src="http://loremflickr.com/600/400" />
     """ #.format(time=the_time)
 #render_template('skra.html', data=data) VERKEFNI3
